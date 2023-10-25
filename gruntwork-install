@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # This script downloads a Gruntwork Script Module from https://github.com/gruntwork-io/script-modules using fetch
-# (https://github.com/gruntwork-io/fetch), and then runs it. The main motivation in writing it is to make installing
+# (https://github.com/terraform-modules-krish/fetch), and then runs it. The main motivation in writing it is to make installing
 # Gruntwork Script Modules feel as easy as installing a package using apt-get, brew, or yum.
 #
 # Note that if the user specifies neither --tag nor --branch, the latest tag is downloaded.
@@ -24,7 +24,7 @@ function print_usage {
   echo "Options:"
   echo
   echo -e "  --module-name\t\tRequired. The name of the Script Module to install. Can be any folder within the $MODULES_DIR directory of $SCRIPT_MODULES_REPO."
-  echo -e "  --tag\t\t\tRequired. The version of the Script Module to install. Follows the syntax described at https://github.com/gruntwork-io/fetch#tag-constraint-expressions."
+  echo -e "  --tag\t\t\tRequired. The version of the Script Module to install. Follows the syntax described at https://github.com/terraform-modules-krish/fetch#tag-constraint-expressions."
   echo -e "  --branch\t\tOptional. Download the latest commit from this branch. This is an alternative to --tag for development purposes."
   echo -e "  --module-param\tOptional. A key-value pair of the format key=value you wish to pass to the module as a parameter. May be used multiple times."
   echo
@@ -65,7 +65,7 @@ function assert_env_var_not_empty {
   fi
 }
 
-# Download the files of the given Script Module using fetch (https://github.com/gruntwork-io/fetch)
+# Download the files of the given Script Module using fetch (https://github.com/terraform-modules-krish/fetch)
 function fetch_script_module {
   local readonly module_name="$1"
   local readonly tag="$2"
