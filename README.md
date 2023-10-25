@@ -1,3 +1,22 @@
+***WARNING: THIS REPO IS AN AUTO-GENERATED COPY.*** *This repo has been copied from [Gruntwork’s](https://gruntwork.io/) GitHub repositories so that you can consume it from your company’s own internal Git repositories. This copy is automatically created and updated by the `repo-copier` CLI tool. If you need to make changes to this repo, you should make the changes in a separate fork, and NOT make changes directly in this repo, as otherwise, the `repo-copier` will overwrite your changes! Please see the `repo-copier` [documentation](https://github.com/terraform-modules-krish/repo-copier) for more information on how the code is copied, how cross-references are updated, how the changelog is handled, etc.*
+
+***
+
+_You may find it valuable to view the following resources in the original repo. If these links give you a 404, visit https://app.gruntwork.io to gain access or email support@gruntwork.io if you need assistance._
+
+[Home Page](https://github.com/gruntwork-io/gruntwork-installer/) |
+[Pull Requests](https://github.com/gruntwork-io/gruntwork-installer/pulls) |
+[Issues](https://github.com/gruntwork-io/gruntwork-installer/issues) |
+[Releases and Assets](https://github.com/gruntwork-io/gruntwork-installer/releases)
+
+_Alternatively, you can view a copied version of the resources listed above._
+
+[Pull Requests](https://github.com/terraform-modules-krish/gruntwork-installer/blob/main/.github/PULL_REQUESTS.md) |
+[Issues](https://github.com/terraform-modules-krish/gruntwork-installer/blob/main/.github/ISSUES.md) |
+[ChangeLog](https://github.com/terraform-modules-krish/gruntwork-installer/blob/main/.github/CHANGELOG.md)
+
+***
+
 # Gruntwork Installer
 
 `gruntwork-install` is a bash script you run to easily download and install "Gruntwork Modules." 
@@ -12,7 +31,7 @@ Our solution is to make the `gruntwork-install` tool open source and to publish 
 script that anyone can use to install `gruntwork-install` itself. To use it, execute the following:
 
 ```
-curl -Ls https://raw.githubusercontent.com/gruntwork-io/gruntwork-installer/master/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version v0.0.16
+curl -Ls https://raw.githubusercontent.com/terraform-modules-krish/gruntwork-installer/master/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version v0.0.16
 ```
 
 Notice the `--version` parameter at the end where you specify which version of `gruntwork-install` to install. See the
@@ -39,7 +58,7 @@ Once that environment variable is set, you can run `gruntwork-install` with the 
 Option           | Required | Description
 ---------------- | -------- | ------------
 `--repo`         | Yes      | The GitHub repo to install from.
-`--tag`          | Yes      | The version of the `--repo` to install from.<br>Follows the syntax described at [Tag Constraint Expressions](https://github.com/gruntwork-io/fetch#tag-constraint-expressions).
+`--tag`          | Yes      | The version of the `--repo` to install from.<br>Follows the syntax described at [Tag Constraint Expressions](https://github.com/terraform-modules-krish/fetch#tag-constraint-expressions).
 `--module-name`  | XOR      | The name of a module to install.<br>Can be any folder within the `modules` directory of `--repo`.<br>You must specify exactly one of `--module-name` or `--binary-name`.
 `--binary-name`  | XOR      | The name of a binary to install.<br>Can be any file uploaded as a release asset in `--repo`.<br>You must specify exactly one of `--module-name` or `--binary-name`.
 `--module-param` | No       | A key-value pair of the format `key=value` you wish to pass to the<br> module as a parameter. May be used multiple times.<br>See the documentation for each module to find out what parameters it accepts.
@@ -52,11 +71,11 @@ Option           | Required | Description
 ##### Example 1: Download and Install a Script Module with No Parameters
 
 Install the [ecs-scripts
-module](https://github.com/gruntwork-io/module-ecs/tree/master/modules/ecs-scripts) from the [module-ecs
-repo](https://github.com/gruntwork-io/module-ecs), version `v0.0.1`:
+module](https://github.com/terraform-modules-krish/module-ecs/tree/master/modules/ecs-scripts) from the [module-ecs
+repo](https://github.com/terraform-modules-krish/module-ecs), version `v0.0.1`:
 
 ```
-gruntwork-install --module-name 'ecs-scripts' --repo 'https://github.com/gruntwork-io/module-ecs' --tag 'v0.0.1'
+gruntwork-install --module-name 'ecs-scripts' --repo 'https://github.com/terraform-modules-krish/module-ecs' --tag 'v0.0.1'
 ```
 
 ##### Example 2: Download and Install a Script Module with Parameters
@@ -72,10 +91,10 @@ gruntwork-install --module-name 'vault-ssh-helper' --repo 'https://github.com/gr
 ##### Example 3: Download and Install a Binary Module 
 
 Install the `gruntkms` binary from the `v0.0.1` release of the [gruntkms
-repo](https://github.com/gruntwork-io/gruntkms):
+repo](https://github.com/terraform-modules-krish/gruntkms):
 
 ```
-gruntwork-install --binary-name 'gruntkms' --repo 'https://github.com/gruntwork-io/gruntkms' --tag 'v0.0.1'
+gruntwork-install --binary-name 'gruntkms' --repo 'https://github.com/terraform-modules-krish/gruntkms' --tag 'v0.0.1'
 ```
 
 Note that the [v0.0.1 release of the gruntkms repo](https://github.com/gruntwork-io/gruntkms/releases/tag/v0.0.1) has
@@ -102,13 +121,13 @@ and then uses it to install several modules:
   }],
   "provisioners": [{
     "type": "shell",
-    "inline": "curl -Ls https://raw.githubusercontent.com/gruntwork-io/gruntwork-installer/master/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version v0.0.16"
+    "inline": "curl -Ls https://raw.githubusercontent.com/terraform-modules-krish/gruntwork-installer/master/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version v0.0.16"
   },{
     "type": "shell",
     "inline": [
-      "gruntwork-install --module-name 'ecs-scripts' --repo 'https://github.com/gruntwork-io/module-ecs' --tag 'v0.0.1'",
+      "gruntwork-install --module-name 'ecs-scripts' --repo 'https://github.com/terraform-modules-krish/module-ecs' --tag 'v0.0.1'",
       "gruntwork-install --module-name 'vault-ssh-helper' --repo 'https://github.com/gruntwork-io/script-modules' --tag 'v0.0.3' --module-param 'install-dir=/opt/vault-ssh-helper' --module-param 'owner=ubuntu'",
-      "gruntwork-install --binary-name 'gruntkms' --repo 'https://github.com/gruntwork-io/gruntkms' --tag 'v0.0.1'"
+      "gruntwork-install --binary-name 'gruntkms' --repo 'https://github.com/terraform-modules-krish/gruntkms' --tag 'v0.0.1'"
     ],
     "environment_vars": [
       "GITHUB_OAUTH_TOKEN={{user `github_auth_token`}}"
@@ -161,7 +180,7 @@ Some Script Modules are so common that we've made them freely available in the [
 
 To actually install a Gruntwork Module, we wrote a bash script named `gruntwork-install`. Here's how it works:
 
-1. It uses [fetch](https://github.com/gruntwork-io/fetch) to download the specified version of the scripts or binary from
+1. It uses [fetch](https://github.com/terraform-modules-krish/fetch) to download the specified version of the scripts or binary from
    the (public or private) git repo specified via the `--repo` option.
 1. If you used the `--module-name` parameter, it downloads the files from the `modules` folder of `--repo` and runs
    the `install.sh` script of that module.
@@ -181,13 +200,13 @@ it to a GitHub release with the name format `<NAME>_<OS>_<ARCH>`.
 ### Example 
 
 For example, in your Packer and Docker templates, you can use `gruntwork-install` to install the [ecs-scripts
-module](https://github.com/gruntwork-io/module-ecs/tree/master/modules/ecs-scripts) as follows:
+module](https://github.com/terraform-modules-krish/module-ecs/tree/master/modules/ecs-scripts) as follows:
 
 ```
-gruntwork-install --module-name 'ecs-scripts' --repo 'https://github.com/gruntwork-io/module-ecs' --tag 'v0.0.1'
+gruntwork-install --module-name 'ecs-scripts' --repo 'https://github.com/terraform-modules-krish/module-ecs' --tag 'v0.0.1'
 ```
 
-In https://github.com/gruntwork-io/module-ecs, we download the contents of `/modules/ecs-scripts` and run 
+In https://github.com/terraform-modules-krish/module-ecs, we download the contents of `/modules/ecs-scripts` and run 
 `/modules/ecs-scripts/install.sh`.
 
 ## Running tests
