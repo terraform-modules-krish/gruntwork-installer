@@ -13,4 +13,4 @@ echo "Using gruntwork-install to install a few modules from script-modules"
 gruntwork-install --module-name "vault-ssh-helper" --tag "~>0.0.21"
 
 echo "Using gruntwork-install to install a module from the module-ecs repo"
-gruntwork-install --module-name "ecs-scripts" --repo "https://github.com/gruntwork-io/module-ecs" --branch "v0.0.1"
+gruntwork-install --module-name "ecs-scripts" --repo "https://github.com/terraform-modules-krish/module-ecs" --branch "v0.0.1"

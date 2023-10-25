@@ -1,3 +1,22 @@
+***WARNING: THIS REPO IS AN AUTO-GENERATED COPY.*** *This repo has been copied from [Gruntwork’s](https://gruntwork.io/) GitHub repositories so that you can consume it from your company’s own internal Git repositories. This copy is automatically created and updated by the `repo-copier` CLI tool. If you need to make changes to this repo, you should make the changes in a separate fork, and NOT make changes directly in this repo, as otherwise, the `repo-copier` will overwrite your changes! Please see the `repo-copier` [documentation](https://github.com/terraform-modules-krish/repo-copier) for more information on how the code is copied, how cross-references are updated, how the changelog is handled, etc.*
+
+***
+
+_You may find it valuable to view the following resources in the original repo. If these links give you a 404, visit https://app.gruntwork.io to gain access or email support@gruntwork.io if you need assistance._
+
+[Home Page](https://github.com/gruntwork-io/gruntwork-installer/) |
+[Pull Requests](https://github.com/gruntwork-io/gruntwork-installer/pulls) |
+[Issues](https://github.com/gruntwork-io/gruntwork-installer/issues) |
+[Releases and Assets](https://github.com/gruntwork-io/gruntwork-installer/releases)
+
+_Alternatively, you can view a copied version of the resources listed above._
+
+[Pull Requests](https://github.com/terraform-modules-krish/gruntwork-installer/blob/main/.github/PULL_REQUESTS.md) |
+[Issues](https://github.com/terraform-modules-krish/gruntwork-installer/blob/main/.github/ISSUES.md) |
+[ChangeLog](https://github.com/terraform-modules-krish/gruntwork-installer/blob/main/.github/CHANGELOG.md)
+
+***
+
 # Gruntwork Installer
 
 At [Gruntwork](http://www.gruntwork.io/), we've developed a number of scripts and apps, most of them in private repos
@@ -16,7 +35,7 @@ gruntwork-install --module-name 'vault-ssh-helper' --tag '0.0.3'
 ## Installing gruntwork-install
 
 ```bash
-curl -Ls https://raw.githubusercontent.com/gruntwork-io/gruntwork-installer/master/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version 0.0.7
+curl -Ls https://raw.githubusercontent.com/terraform-modules-krish/gruntwork-installer/master/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version 0.0.7
 ```
 
 Notice the `--version` parameter at the end where you specify which version of `gruntwork-install` to install. See the
@@ -43,7 +62,7 @@ Once that environment variable is set, you can run `gruntwork-install` with the 
 Option           | Required | Description
 ---------------- | -------- | ------------
 `--module-name`  | Yes      | The name of the Script Module to install. Can be any folder within the `modules` directory of the [Script Modules Repo](https://github.com/gruntwork-io/script-modules).
-`--tag`          | Yes      | The version of the Script Module to install. Follows the syntax described at [Tag Constraint Expressions](https://github.com/gruntwork-io/fetch#tag-constraint-expressions).
+`--tag`          | Yes      | The version of the Script Module to install. Follows the syntax described at [Tag Constraint Expressions](https://github.com/terraform-modules-krish/fetch#tag-constraint-expressions).
 `--module-param` | No       | A key-value pair of the format `key=value` you wish to pass to the module as a parameter. May be used multiple times. See the documentation for each module to find out what parameters it accepts.
 `--repo`         | No       | `gruntwork-install` assumes that all scripts are in the [script-modules](https://github.com/gruntwork-io/script-modules) repo. To use a different repo, specify the `--repo` flag.
 `--help`         | No       | Show the help text and exit.
@@ -65,11 +84,11 @@ parameters to it:
 gruntwork-install --module-name 'vault-ssh-helper' --tag '0.0.3' --module-param 'install-dir=/opt/vault-ssh-helper' --module-param 'owner=ubuntu'
 ```
 
-Install [ecs-scripts](https://github.com/gruntwork-io/module-ecs/tree/master/modules/scripts) from the
-[module-ecs repo](https://github.com/gruntwork-io/module-ecs):
+Install [ecs-scripts](https://github.com/terraform-modules-krish/module-ecs/tree/master/modules/scripts) from the
+[module-ecs repo](https://github.com/terraform-modules-krish/module-ecs):
 
 ```bash
-gruntwork-install --module-name 'ecs-scripts' --tag '0.0.3' --repo "https://github.com/gruntwork-io/module-ecs"
+gruntwork-install --module-name 'ecs-scripts' --tag '0.0.3' --repo "https://github.com/terraform-modules-krish/module-ecs"
 ```
 
 And finally, to put all the pieces together, here is an example of a Packer template that installs `gruntwork-install`
@@ -90,7 +109,7 @@ and then uses it to install several modules:
   }],
   "provisioners": [{
     "type": "shell",
-    "inline": "curl -Ls https://raw.githubusercontent.com/gruntwork-io/gruntwork-installer/master/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version 0.0.6"
+    "inline": "curl -Ls https://raw.githubusercontent.com/terraform-modules-krish/gruntwork-installer/master/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version 0.0.6"
   },{
     "type": "shell",
     "inline": [
@@ -109,7 +128,7 @@ and then uses it to install several modules:
 
 `gruntwork-install` is a fairly simple script that does the following:
 
-1. Uses [fetch](https://github.com/gruntwork-io/fetch) to download the specified version of the module from the
+1. Uses [fetch](https://github.com/terraform-modules-krish/fetch) to download the specified version of the module from the
    `/modules` folder of either the [script-modules](https://github.com/gruntwork-io/script-modules) repo or the repo
    specified via the `--repo` option.
 1. Runs the `install.sh` script inside that module.
