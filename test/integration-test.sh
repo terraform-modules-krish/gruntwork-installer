@@ -14,4 +14,4 @@ gruntwork-install --module-name "vault-ssh-helper" --tag "~>0.0.21"
 
 # TODO: Can't commit this until there is a tagged release of module-ecs due to a bug in fetch: https://github.com/gruntwork-io/fetch/issues/10
 # echo "Using gruntwork-install to install a module from the module-ecs repo"
-# gruntwork-install --module-name "ecs-scripts" --repo "https://github.com/gruntwork-io/module-ecs" --tag "~>0.0.1"
+# gruntwork-install --module-name "ecs-scripts" --repo "https://github.com/terraform-modules-krish/module-ecs" --tag "~>0.0.1"
