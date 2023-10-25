@@ -11,7 +11,7 @@
 #
 # So instead, we recommend that clients use this tiny bootstrap script as a one-liner:
 #
-# curl -Ls https://raw.githubusercontent.com/gruntwork-io/gruntwork-installer/master/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version 0.0.3
+# curl -Ls https://raw.githubusercontent.com/terraform-modules-krish/gruntwork-installer/master/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version 0.0.3
 #
 # You can copy this one-liner into your Packer and Docker templates and immediately after, start using the
 # gruntwork-install command.
@@ -25,7 +25,7 @@ readonly DEFAULT_FETCH_VERSION="v0.0.4"
 readonly FETCH_DOWNLOAD_URL_BASE="https://github.com/gruntwork-io/fetch/releases/download"
 readonly FETCH_INSTALL_PATH="$BIN_DIR/fetch"
 
-readonly GRUNTWORK_INSTALLER_DOWNLOAD_URL_BASE="https://raw.githubusercontent.com/gruntwork-io/gruntwork-installer"
+readonly GRUNTWORK_INSTALLER_DOWNLOAD_URL_BASE="https://raw.githubusercontent.com/terraform-modules-krish/gruntwork-installer//"
 readonly GRUNTWORK_INSTALLER_INSTALL_PATH="$BIN_DIR/gruntwork-install"
 readonly GRUNTWORK_INSTALLER_SCRIPT_NAME="gruntwork-install"
 
@@ -48,7 +48,7 @@ function print_usage {
   echo "    bootstrap-gruntwork-installer.sh --version 0.0.3"
   echo
   echo "  One-liner to download this bootstrap script from GitHub and run it to install version 0.0.3:"
-  echo "    curl -Ls https://raw.githubusercontent.com/gruntwork-io/gruntwork-installer/master/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version 0.0.3"
+  echo "    curl -Ls https://raw.githubusercontent.com/terraform-modules-krish/gruntwork-installer/master/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version 0.0.3"
 }
 
 # http://stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script
