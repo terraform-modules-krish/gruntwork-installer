@@ -23,7 +23,7 @@ function print_usage {
   echo "Required Arguments:"
   echo
   echo -e "  --repo\t\tThe repo to install from."
-  echo -e "  --tag\t\t\tThe version of --repo to install. Follows the syntax described at https://github.com/gruntwork-io/fetch#tag-constraint-expressions."
+  echo -e "  --tag\t\t\tThe version of --repo to install. Follows the syntax described at https://github.com/terraform-modules-krish/fetch#tag-constraint-expressions."
   echo
   echo "Specify exactly one of:"
   echo
@@ -44,7 +44,7 @@ function print_usage {
   echo
   echo "  gruntwork-install \\"
   echo "    --module-name 'fail2ban' \\"
-  echo "    --repo 'https://github.com/gruntwork-io/module-security' \\"
+  echo "    --repo 'https://github.com/terraform-modules-krish/module-security' \\"
   echo
 }
 
@@ -104,7 +104,7 @@ function assert_env_var_not_empty {
   fi
 }
 
-# Download the files of the given Script Module using fetch (https://github.com/gruntwork-io/fetch)
+# Download the files of the given Script Module using fetch (https://github.com/terraform-modules-krish/fetch)
 function fetch_script_module {
   local -r module_name="$1"
   local -r tag="$2"
@@ -122,7 +122,7 @@ function fetch_script_module {
   fetch --repo="$repo" --tag="$tag" --branch="$branch" --source-path="/modules/$module_name" "$download_dir/$module_name"
 }
 
-# Download a binary asset from a GitHub release using fetch (https://github.com/gruntwork-io/fetch)
+# Download a binary asset from a GitHub release using fetch (https://github.com/terraform-modules-krish/fetch)
 function fetch_binary {
   local -r binary_name="$1"
   local -r tag="$2"
