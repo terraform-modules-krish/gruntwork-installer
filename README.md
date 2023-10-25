@@ -1,3 +1,22 @@
+***WARNING: THIS REPO IS AN AUTO-GENERATED COPY.*** *This repo has been copied from [Gruntwork’s](https://gruntwork.io/) GitHub repositories so that you can consume it from your company’s own internal Git repositories. This copy is automatically created and updated by the `repo-copier` CLI tool. If you need to make changes to this repo, you should make the changes in a separate fork, and NOT make changes directly in this repo, as otherwise, the `repo-copier` will overwrite your changes! Please see the `repo-copier` [documentation](https://github.com/terraform-modules-krish/repo-copier) for more information on how the code is copied, how cross-references are updated, how the changelog is handled, etc.*
+
+***
+
+_You may find it valuable to view the following resources in the original repo. If these links give you a 404, visit https://app.gruntwork.io to gain access or email support@gruntwork.io if you need assistance._
+
+[Home Page](https://github.com/gruntwork-io/gruntwork-installer/) |
+[Pull Requests](https://github.com/gruntwork-io/gruntwork-installer/pulls) |
+[Issues](https://github.com/gruntwork-io/gruntwork-installer/issues) |
+[Releases and Assets](https://github.com/gruntwork-io/gruntwork-installer/releases)
+
+_Alternatively, you can view a copied version of the resources listed above._
+
+[Pull Requests](https://github.com/terraform-modules-krish/gruntwork-installer/blob/main/.github/PULL_REQUESTS.md) |
+[Issues](https://github.com/terraform-modules-krish/gruntwork-installer/blob/main/.github/ISSUES.md) |
+[ChangeLog](https://github.com/terraform-modules-krish/gruntwork-installer/blob/main/.github/CHANGELOG.md)
+
+***
+
 # Gruntwork Installer
 
 [Gruntwork Script Modules](https://github.com/gruntwork-io/script-modules) is a private repo that contains scripts and
@@ -14,7 +33,7 @@ gruntwork-install --module-name 'vault-ssh-helper' --tag '0.0.3'
 ## Installing gruntwork-install
 
 ```bash
-curl -Ls https://raw.githubusercontent.com/gruntwork-io/gruntwork-installer/master/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version 0.0.3
+curl -Ls https://raw.githubusercontent.com/terraform-modules-krish/gruntwork-installer/master/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version 0.0.3
 ```
 
 Notice the `--version` parameter at the end where you specify which version of `gruntwork-install` to install. See the
@@ -41,7 +60,7 @@ Once that environment variable is set, you can run `gruntwork-install` with the 
 Option           | Required | Description
 ---------------- | -------- | ------------
 `--module-name`  | Yes      | The name of the Script Module to install. Can be any folder within the `modules` directory of the [Script Modules Repo](https://github.com/gruntwork-io/script-modules).
-`--tag`          | Yes      | The version of the Script Module to install. Follows the syntax described at [Fetch Version Constraint Operators](https://github.com/gruntwork-io/fetch#version-constraint-operators).
+`--tag`          | Yes      | The version of the Script Module to install. Follows the syntax described at [Fetch Version Constraint Operators](https://github.com/terraform-modules-krish/fetch#version-constraint-operators).
 `--module-param` | No       | A key-value pair of the format `key=value` you wish to pass to the module as a parameter. May be used multiple times. See the documentation for each module to find out what parameters it accepts.
 `--help`         | No       | Show the help text and exit.
 
@@ -77,7 +96,7 @@ and then uses it to install several modules:
   }],
   "provisioners": [{
     "type": "shell",
-    "inline": "curl -Ls https://raw.githubusercontent.com/gruntwork-io/gruntwork-installer/master/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version 0.0.3"
+    "inline": "curl -Ls https://raw.githubusercontent.com/terraform-modules-krish/gruntwork-installer/master/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version 0.0.3"
   },{
     "type": "shell",
     "inline": [
@@ -119,5 +138,3 @@ execute it from there.
 We wrote our [bootstrap-gruntwork-installer.sh](bootstrap-gruntwork-installer.sh) as a series of bash functions that
 are only executed by the very last line of the script. Therefore, if the script doesn't fully download, the worst
 that'll happen when you execute it is a harmless syntax error.
-
-
